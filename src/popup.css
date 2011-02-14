@@ -1,0 +1,20 @@
+.button {
+	cursor:default;
+	text-align:center;
+	font:14px sans-serif;
+	width:320px;
+	height:20px;
+	margin:10px 0;
+	padding:0;
+	background-color:#333333;
+	color:#ffffff;
+	border-radius:4px;
+}
+textarea {
+	width:320px;
+	height:80px;
+	font-size:12px;
+	margin:0;
+	padding:0;
+}
+
