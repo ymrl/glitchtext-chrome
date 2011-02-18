@@ -14,9 +14,10 @@
    } ],
    "description": "glitchtext extension",
    "icons": {
-      "48": "icon_48.png"
+      "48": "icon_48.png",
+			"128" : "icon_128.png"
    },
-   "name": "glitchtext for chrome",
+   "name": "glitchtext",
    "permissions": ["http://*/*", "https://*/*"],
    "version": "0.1.1"
 }
