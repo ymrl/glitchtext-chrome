@@ -1,12 +1,14 @@
 Glitchtext Chrome Extension
 ==============
 Glitchtextを使うためのChrome Extensionです
-https://chrome.google.com/webstore/detail/jcpjmafogaeejdbbehekcihblpcdpcnp
+
+[インストールはこちらからどうぞ](https://chrome.google.com/webstore/detail/jcpjmafogaeejdbbehekcihblpcdpcnp)
 
 含まれるライブラリ
 ==============
-*[glitchtext.js](https://github.com/shokai/js-glitchtext)
-*[tiny_segmenter-0.1.js](http://chasen.org/~taku/software/TinySegmenter/)
+* [glitchtext.js](https://github.com/shokai/js-glitchtext)
+* [tiny_segmenter-0.1.js](http://chasen.org/~taku/software/TinySegmenter/)
+
 これらの著作権はそれぞれの作者に属します。
 
 ライセンス

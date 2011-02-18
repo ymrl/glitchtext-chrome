@@ -15,12 +15,21 @@ function glitch(source){
 	}).join(' ');
   return result;
 }
+
 function isUrlGlitchAnywhereEnable(u){
-	if(localStorage["useGlitchAnywhere"] != "true"){return false;}
-	var regs = localStorage["urlNotUseGlitchAnywhere"].split(/\n/);
-	for(var i=0;i<regs.length;i++){
-		var reg = new RegExp(regs[i]);
-		if(u.match(reg)){ return false;}
+	if(localStorage["useGlitchAnywhere"]=="false"){
+		return false;
+	}else if(localStorage["useGlitchAnywhere"]==undefined){
+		localStorage["useGlitchAnywhere"]="true";
+	}
+	if(localStorage["urlNotUseGlitchAnywhere"]){
+		var regs = localStorage["urlNotUseGlitchAnywhere"].split(/\n/);
+		for(var i=0;i<regs.length;i++){
+			var reg = new RegExp(regs[i]);
+			if(u.match(reg)){ return false;}
+		}
+	}else{
+		localStorage["urlNotUseGlitchAnywhere"]="";
 	}
 	return true;
 }
