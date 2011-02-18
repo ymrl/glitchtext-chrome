@@ -17,4 +17,14 @@ textarea {
 	margin:0;
 	padding:0;
 }
+.limit {
+	font-size:14px
+}
+#strLengthLimit{
+	width:80px
+}
+.counter {
+	text-align:right;
+	font-size:12px;
+}
 

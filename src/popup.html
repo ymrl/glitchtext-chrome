@@ -7,13 +7,15 @@
     <script src="./libs/tiny_segmenter-0.1.js" type="text/javascript" charset="utf-8"></script>
     <script src="./glitchtext_min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./popup.js" type="text/javascript"></script>
-		<link rel="stylesheet" type="text/css" src="./popup.css">
-	<link rel="stylesheet" type="text/css" href="./popup.css" /> 
+		<link rel="stylesheet" type="text/css" href="./popup.css" /> 
 	</head>
 	<body>
 		<form>
+			<div class = "counter" id="sourceCounter">0</div>
 			<textarea id="sourceArea" ></textarea>
+			<div class="limit"><label><input type="checkbox" id="isStrLengthLimited" checked="true">Limit : <input type="number" value="140" id="strLimitLength">Characters</label></div>
 			<div id="glitchButton" class="button">＼gl↓itc↑h／</div>
+			<div class = "counter" id="resultCounter">0</div>
 			<textarea id="resultArea"></textarea>
 			<div id="copyButton" class="button">c c o o p p y y</div>
 		</form>

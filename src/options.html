@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript; charset=UTF-8">
+		<meta http-equiv="Content-Style-Type" content="text/css; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="./options.css" /> 
+		<script type="text/javascript" src="options.js"></script>
+		<title>Glitchtext Options</title>
+	</head>
+	<body>
+		<h1>Glitchtext Options</h1>
+
+		<h2>Glitchtext Popup</h2>
+		<p><label>
+			<input type="checkbox"id="alwaysLimit" name="alwaysLimit" checked="true">
+			常にグリッチされたテキストの長さを制限する
+		</label></p>
+
+		<p><label>
+			グリッチされたテキストのデフォルトの長さ制限 : 
+			<input type="number" id="defaultLimitLength" name="defaultLimitLength" value="140">
+			文字
+		</label></p>
+
+		<h2>Glitchtext Anywhere</h2>
+		<p><label>
+			<input type="checkbox"id="useGlitchAnywhere" name="useGlitchAnywhere" checked="true" value="true">
+			使用する
+		</label></p>
+		<p><label>
+			利用しないページのURL(正規表現) :<br />
+			<textarea id="urlNotUseGlitchAnywhere" name="urlNotUseGlitchAnywhere" cols="100" rows="10"></textarea>
+
+		</label></p>
+
+		<p><button id="saveButton">保存</button></p>
+	</body>
+</html>

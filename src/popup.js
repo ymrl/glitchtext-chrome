@@ -3,6 +3,10 @@ var souceArea;
 var glitchButton;
 var resultArea;
 var copyButton;
+var isStrLengthLimitedField;
+var strLimitLengthField;
+var sourceCounter;
+var resultCounter;
 var no_glitch = /(https?\:[\w\.\~\-\/\?\&\+\=\:\@\%\;\#\%]+|[#@][A-Za-z0-9_]+)/;
 
 function glitch(source){
@@ -19,18 +23,52 @@ function glitch(source){
 	}).join(' ');
   return result;
 }
+function glitchFromSource(){
+	var result = glitch(sourceArea.value);
+	if(isStrLengthLimitedField.value == "on"){
+		result = result.slice(0,parseInt(strLimitLengthField.value));
+	}
+	resultArea.value = result;
+	resultCounter.textContent = result.length;
+}
+
 window.addEventListener('load',function(){
 	souceArea = document.getElementById('sourceArea');
 	glitchButton = document.getElementById('glitchButton');
 	resultArea = document.getElementById('resultArea');
 	copyButton = document.getElementById('copyButton');
+	isStrLengthLimitedField = document.getElementById('isStrLengthLimited');
+	strLimitLengthField = document.getElementById('strLimitLength');
+	resultCounter = document.getElementById('resultCounter');
+	sourceCounter = document.getElementById('sourceCounter');
 	glitchButton.textContent = glitch("glitch").slice(0,40);
 	copyButton.textContent = glitch("copy").slice(0,40);
 
-	//document.getElementById('glitchButton').addEventListener('click',function(){
-	glitchButton.addEventListener('click',function(){
-		resultArea.value = glitch(sourceArea.value);
-	},true);
+	sourceArea.addEventListener('keyup',function(){
+		sourceCounter.textContent = sourceArea.value.length;
+		glitchFromSource();
+	})
+	resultArea.addEventListener('keyup',function(){
+		resultCounter.textContent = resultArea.value.length;
+	})
+
+	if(localStorage["defaultLimitLength"]){
+		strLimitLengthField.value = localStorage["defaultLimitLength"];
+	}else if(localStorage["defaultLimitLength"] == undefined){ 
+		localStorage["defaultLimitLength"] = strLimitLengthField.value;
+	}
+
+	if(localStorage["alwaysLimit"] == "true"){
+		isStrLengthLimitedField.checked = true;
+	}else if(localStorage["alwaysLimit"] == undefined){
+		isStrLengthLimitedField.checked = true;
+		localStorage["alwaysLimit"] = "true";
+	}else{
+		isStrLengthLimitedField.checked = false;
+	}
+
+	glitchButton.addEventListener('click',glitchFromSource,true);
+
 	copyButton.addEventListener('click',function(){
 		resultArea.select();
 		resultArea.focus();

@@ -1,0 +1,15 @@
+body {
+	margin:10px 20px;
+	padding:0;
+}
+h1 {
+	font:normal 24px sans-serif;
+	color:#333;
+	text-align:right;
+	border-bottom:1px solid #333;
+	width:100%;
+}
+h2 {
+	font:bold 18px sans-serif;
+	color:#000;
+	}
