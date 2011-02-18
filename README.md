@@ -1,7 +1,7 @@
 Glitchtext Chrome Extension
 ==============
 Glitchtextを使うためのChrome Extensionです
-
+https://chrome.google.com/webstore/detail/jcpjmafogaeejdbbehekcihblpcdpcnp
 
 含まれるライブラリ
 ==============
