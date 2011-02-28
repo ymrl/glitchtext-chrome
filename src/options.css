@@ -12,4 +12,7 @@ h1 {
 h2 {
 	font:bold 18px sans-serif;
 	color:#000;
+	margin:50px 0 0 0;
+	padding:8px 0 0 0 ;
+	border-top:1px solid #ccc;
 	}

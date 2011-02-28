@@ -10,7 +10,11 @@ window.addEventListener("load",function(){
 			var val = localStorage[field.name];
 			if(field.type=="checkbox"){
 				if(val){
-					field.checked = true;
+					if(val != "false"){
+						field.checked = true;
+					}else{
+						field.checked = false;
+					}
 				}else if(val == undefined){
 					if(field.checked){
 						localStorage[field.name] = "true";

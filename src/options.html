@@ -10,6 +10,7 @@
 	</head>
 	<body>
 		<h1>Glitchtext Options</h1>
+		<p>ページ最下部の「保存」ボタンを押すと保存されます。</p>
 
 		<h2>Glitchtext Popup</h2>
 		<p><label>
@@ -31,7 +32,21 @@
 		<p><label>
 			利用しないページのURL(正規表現) :<br />
 			<textarea id="urlNotUseGlitchAnywhere" name="urlNotUseGlitchAnywhere" cols="100" rows="10"></textarea>
+		</label></p>
 
+		<h2>Glitchtext AllContent</h2>
+		<p><label>
+			<input type="checkbox"id="useGlitchAllContent" name="useGlitchAllContent" checked="true" value="true">
+			使用する
+		</label></p>
+		<p><label>
+			利用しないページのURL(正規表現) :<br />
+			<textarea id="urlNotUseGlitchAllContent" name="urlNotUseGlitchAllContent" cols="100" rows="10"></textarea>
+		</label></p>
+
+		<p><label>
+			<input type="checkbox" id="alwaysGlitchAllContent" name="alwaysGlitchAllContent" value="true">
+			常に全てのページをグリッチ（非推奨）
 		</label></p>
 
 		<p><button id="saveButton">保存</button></p>

@@ -8,10 +8,15 @@
    },
    "content_scripts": [ {
       "all_frames": true,
-      "js": [ "content.js" ],
+      "js": [ "textarea.js" ],
       "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ],
-      "run_at": "document_idle"
-   } ],
+      "run_at": "document_start"
+		 },{
+      "all_frames": false,
+      "js": [ "page.js" ],
+      "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ],
+      "run_at": "document_start"
+	 } ],
    "description": "glitchtext extension",
    "icons": {
       "48": "icon_48.png",

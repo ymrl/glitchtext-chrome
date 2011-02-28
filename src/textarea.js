@@ -1,4 +1,5 @@
 var glitchButtonAdded = [];
+
 function addButton(a){
 	if(glitchButtonAdded.indexOf(a)>=0){ return; }
 	if(a.clientHeight ==0){ return; }
@@ -70,6 +71,28 @@ function addButton(a){
 	});
 }
 
+function glitchChild(n){
+	var c = n.childNodes;
+	if(n.tagName.match(/script|style/i)){
+		return null;
+	}
+  for(var i=0;i<c.length;i++){
+		var m = c[i];
+		if(m.tagName){
+			glitchChild(m);
+		}else{
+			chrome.extension.sendRequest(
+				{command:'glitch',source:m.textContent},
+				function(res){
+					m.textContent = res.result;
+				}
+			);
+			//m.textContent = m.textContent.split('').reverse().join('');
+		}
+	}
+}
+
+
 chrome.extension.sendRequest(
 		{command:'anywhereEnable',url:document.location.href},
 		function(res){
@@ -83,5 +106,3 @@ chrome.extension.sendRequest(
 			}
 		}
 		);
-		
-
