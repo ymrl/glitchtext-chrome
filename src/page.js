@@ -43,7 +43,6 @@ function addButton(){
 chrome.extension.sendRequest(
 		{command:'alwaysAllContentEnable'},
 		function(res){
-			console.log(res);
 			if(res.enable){
 				glitchChild(document.body);
 			}else{

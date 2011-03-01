@@ -10,7 +10,7 @@
       "all_frames": true,
       "js": [ "textarea.js" ],
       "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ],
-      "run_at": "document_start"
+      "run_at": "document_idle"
 		 },{
       "all_frames": false,
       "js": [ "page.js" ],
@@ -24,5 +24,5 @@
    },
    "name": "glitchtext",
    "permissions": ["http://*/*", "https://*/*"],
-   "version": "0.2.0"
+   "version": "0.2.1"
 }
